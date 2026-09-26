@@ -1,0 +1,471 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#curriculum {
+
+    .wrapper {
+        background: #f6f6f6;
+    
+
+    }
+
+    .mv {
+
+       
+
+
+        height: 160vh;
+
+        &__container {
+            position: absolute;
+            top: 38%;
+            left: 11%;
+            z-index: 1;
+        }
+
+        &__ttl {
+            font-family: $font-poppins;
+            font-size: 96px;
+            font-weight: $fw-600;
+            letter-spacing: $ls-005;
+            margin-bottom: 83px;
+        }
+
+        &__txt {
+            font-family: $font-notosans;
+            font-size: $fz_top-18px;
+            letter-spacing: $ls-005;
+            position: relative;
+            display: inline-block;
+            padding: 0 55px;
+
+        }
+
+        &__txt::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background-color: #000;
+            left: 0;
+
+        }
+
+        &__box {
+            height: 100vh;
+            position: relative;
+        }
+
+        &__pic-01 {
+            background: url(../images/curriculum/curriculum_mv.png) center center / 100%;
+            width: 735px;
+            height: 620px;
+            position: absolute;
+            top: 17%;
+            right: 15%;
+        }
+
+        &__pic-02 {
+            background: url(../images/top.deco/mv_img2.png) center center / 100%;
+            width: 352px;
+            height: 268px;
+            position: absolute;
+            bottom: 7%;
+            right: 2%;
+
+        }
+
+        &__deco {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        &__img {
+
+            &:nth-child(1) {
+                background: url(../images/top.deco/obj1.png) no-repeat center center / 100%;
+                width: 666px;
+                height: 478px;
+                position: absolute;
+                bottom: -18%;
+                right: 13%;
+            }
+
+
+
+            &:nth-child(2) {
+                background: url(../images/top.deco/obj3.png) no-repeat center center / 100%;
+                width: 1364px;
+                height: 829px;
+                position: absolute;
+                top: -18%;
+                right: -8%;
+            }
+
+            &:nth-child(3) {
+
+                background: url(../images/top.deco/obj2.png) no-repeat center center / 100%;
+                width: 541px;
+                height: 435px;
+                position: absolute;
+                top: 21%;
+                right: -6%;
+            }
+
+            &:nth-child(4) {
+                background: url(../images/top.deco/obj4.png) no-repeat center center / 100%;
+                width: 1024px;
+                height: 954px;
+                position: absolute;
+                top: 8%;
+                left: -19%;
+            }
+
+            &:nth-child(5) {
+                background: url(../images/top.deco/obj5.png) no-repeat center center / 100%;
+                width: 541px;
+                height: 435px;
+                position: absolute;
+                bottom: -6%;
+                left: 0%;
+            }
+
+            &:nth-child(6) {
+                background: url(../images/top.deco/obj6.png) no-repeat center center / 100%;
+                width: 352px;
+                height: 352px;
+                position: absolute;
+                top: 19%;
+                right: 33%;
+            }
+
+            &:nth-child(7) {
+                background: url(../images/top.deco/obj7.png) no-repeat center center / 100%;
+                width: 270px;
+                height: 204px;
+                position: absolute;
+                bottom: -51%;
+                left: 19%;
+            }
+
+            &:nth-child(8) {
+                background: url(../images/top.deco/obj8.png) no-repeat center center / 100%;
+                width: 360px;
+                height: 360px;
+                position: absolute;
+                bottom: -39%;
+                left: 12%;
+            }
+
+        }
+
+    }
+
+    .sec1 {
+
+        padding: 0 300px 300px 300px;
+        margin-bottom: 600px;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1980px;
+            display: block;
+            background: #9c9c9c;
+            position: absolute;
+            top: -330px;
+            left: 0;
+            transform: rotate(-6deg);
+            border-radius: 230px 0 230px 0;
+            z-index: -1;
+        }
+
+        &__ttl {
+            font-family: $font-notosans;
+            font-size: 54px;
+            letter-spacing: $ls-005;
+            line-height: 150%;
+            margin-bottom: 45px;
+            width: 824px;
+        }
+
+        &__txt {
+            font-family: $font-notosans;
+            font-size: 20px;
+            letter-spacing: $ls-005;
+            line-height: $lh-30;
+            width: 1165px;
+
+        }
+
+        &__box {
+            position: relative;
+            width: 100%;
+
+
+        }
+
+        &__pic1 {
+            position: absolute;
+            top: -50px;
+            right: -300px;
+        }
+
+        &__img1 {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__pic2 {
+            position: absolute;
+            top: 100px;
+            left: -300px;
+        }
+
+        &__img2 {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__pic3 {
+            position: absolute;
+            top: 207px;
+            right: 164px;
+        }
+
+        &__img3 {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__pic4 {
+            position: absolute;
+            top: 280px;
+            left: 300px;
+
+        }
+
+        &__img4 {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__pic5 {
+            position: absolute;
+            top: 440px;
+            left: -130px;
+
+        }
+
+        &__img5 {
+            display: block;
+            object-fit: cover;
+        }
+
+
+
+
+    }
+
+    .sec2 {
+        padding: 0 300px;
+        margin-bottom: 200px;
+
+        
+
+
+        &__ttl {
+            font-family: $font-notosans;
+            font-size: 32px;
+            letter-spacing: $ls-005;
+            line-height: 150%;
+            margin-bottom: 45px;
+            border-left: 4px solid #000;
+            padding-left: 30px;
+
+        }
+
+        &__container {
+            display: flex;
+
+        }
+
+        &__subcontainer {
+            margin-left: 45px;
+        }
+
+        &__box {
+            width: 630px;
+
+            margin-bottom: 50px;
+            position: relative;
+
+        }
+
+        &__number {
+            position: absolute;
+            top: 135px;
+            left: 192px;
+        }
+
+        &__subttl-1 {
+            letter-spacing: $ls-005;
+            font-size: $fz_28px;
+
+        }
+
+        &__subttl-2 {
+            letter-spacing: $ls-005;
+            font-size: $fz_28px;
+
+        }
+
+        &__subttl-3 {
+            letter-spacing: $ls-005;
+            font-size: $fz_28px;
+
+        }
+
+        &__subttl-4 {
+            letter-spacing: $ls-005;
+            font-size: $fz_28px;
+
+        }
+
+        &__subttl-1::before {
+            content: url(../images/curriculum/icon1.png);
+
+        }
+
+        &__subttl-3::before {
+            content: url(../images/curriculum/icon3.png);
+
+        }
+
+        &__subttl-2::before {
+            content: url(../images/curriculum/icon2.png);
+
+        }
+
+        &__subttl-4::before {
+            content: url(../images/curriculum/icon4.png);
+
+        }
+
+        &__txt {
+            margin-top: 50px;
+            font-size: $fz_16px;
+            letter-spacing: $ls-005;
+            line-height: $lh-20;
+        }
+
+    }
+
+    .sec3 {
+
+        padding: 0 300px;
+
+        margin-bottom: 210px;
+
+        &__ttl {
+            font-family: $font-notosans;
+            font-size: 32px;
+            letter-spacing: $ls-005;
+            line-height: 150%;
+            margin-bottom: 45px;
+            border-left: 4px solid #000;
+            padding-left: 30px;
+            margin-bottom: 70px;
+
+        }
+
+
+    }
+
+    .sec4 {
+        padding: 0 300px;
+        padding-bottom: 340px;
+        position: relative;
+
+        &__ttl {
+            font-family: $font-notosans;
+            font-size: 32px;
+            letter-spacing: $ls-005;
+            line-height: 150%;
+            margin-bottom: 45px;
+            border-left: 4px solid #000;
+            padding-left: 30px;
+            margin-bottom: 100px;
+        }
+
+        &__parts1 {
+            position: absolute;
+            top: 60px;
+            left: 150px;
+        }
+
+        &__container {
+            text-align: center;
+            background: #fff;
+            padding: 80px 150px 140px 150px;
+
+        }
+
+
+        &__subttl {
+            font-family: $font-notosans;
+            font-size: $fz_28px;
+            letter-spacing: $ls-005;
+            line-height: 150%;
+            margin-bottom: 70px;
+
+        }
+
+        &__txt {
+            margin-bottom: 40px;
+            letter-spacing: $ls-005;
+            line-height: $lh-20;
+            font-size: $fz_16px;
+        }
+
+        &__txt:hover {
+            color: #0500a0;
+
+        }
+
+        &__link {
+            color: #000;
+            display: block;
+            padding: 5px;
+            letter-spacing: $ls-005;
+            font-size: $fz_16px;
+
+        }
+
+        &__link:hover {
+            color: #0500a0;
+
+        }
+
+
+
+        &__link::after {
+            content: url(../../images/curriculum/externallink.png);
+
+        }
+
+        &__parts2 {
+            position: absolute;
+            top: 580px;
+            right: 150px;
+        }
+
+    }
+
+
+
+}

@@ -1,0 +1,168 @@
+@use "../global" as *;
+
+#works__lower {
+
+    .works {
+        margin: 70px 0 200px 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 150px 0 200px 0;
+        }
+
+        &__ttl {
+            font-family: $f-en;
+            font-size: $fz-lpttljp;
+            font-weight: $fw-bold;
+            text-align: center;
+            margin-bottom: 70px;
+            opacity: 0; 
+            animation: slideinYunder 0.4s ease 0.6s forwards;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-lpttljp__t;
+                margin-bottom: 150px;
+            }
+        }
+
+        &__ttl-en {
+            @include secttlBase;
+            margin-bottom: 50px;
+            animation: slidein 0.6s ease;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+                margin-bottom: 60px;
+
+                &::after {
+                    top: 5px;
+                    height: 48px;
+                    width: 79%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 88%;
+                }
+            }
+
+            @media screen and (min-width: 1500px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 92%;
+                }
+            }
+        }
+
+        &__wrap {
+            padding: 0 25px;
+            margin-bottom: 160px;
+            opacity: 0;
+            animation: fadein 0.5s ease 1.2s forwards;
+
+            @media screen and (min-width: 768px) {
+                padding: 0 8%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__pic {
+            margin-bottom: 20px;
+        }
+
+        &__img {
+            @include imgBase;
+        }
+
+
+        &__box {
+            border: 2px solid #ffffff;
+            padding: 5px;
+            margin-bottom: 50px;
+            transition: 0.3s;
+
+
+            &:hover {
+                border: 2px solid #d4d4d4;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 46%;
+            }
+
+            @media screen and (min-width: 1024px) {
+              margin-bottom: 150px;
+            }
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+
+
+        &__boxttl {
+            font-family: $f-jp;
+            font-size: $fz-lpsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-lpsubttl__t;
+            }
+
+            @media screen and (min-width: 1024px) {
+              font-size: $fz-lpsubttl__p;
+            }
+        }
+
+        &__boxdate {
+            font-family: $f-jp;
+            font-size: $fz-lptxt;
+            margin-bottom: 15px;
+        }
+
+        &__boxtime {
+            font-family: $f-jp;
+            font-size: $fz-lptxt;
+        }
+
+     
+        &__link-2 {
+            @include btnBase;
+            position: relative;
+            text-decoration: none;
+            color: #000;
+            // width: 248px;
+            margin: 0 auto;
+            transition: 0.2s;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+                .works__arrow {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }       
+            }
+        }
+
+        &__more-2 {
+            font-family: $f-en;
+            font-size: 15px;
+            width: 100px;
+        }
+
+        &__arrow {
+            @include arrowBase;
+        }
+    }
+
+}

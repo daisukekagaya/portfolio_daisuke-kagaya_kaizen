@@ -1,0 +1,682 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    .op {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(-45deg, #6098ff, #70b5ff, #51fff9, #f1fbff, #ffffff);
+        transform-origin: top center;
+        animation: op 1s 2s forwards;  
+        pointer-events: none;
+
+        &__logo {
+            animation: oplogo 2s forwards;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+
+        }
+    }
+
+    .wrapper {
+        background: $base-cl;
+    }
+
+    .mv {
+
+        margin-bottom: $ma-sec;
+
+        &__mv {
+            position: relative;
+            background: url(../images/mv.jpg)center center / cover;
+            height: 100vh;
+        }
+
+        &__box {
+            position: absolute;
+            bottom: 445px;
+            right: 32px;
+        }
+
+        &__sns {
+            width: 31px;
+            height: 31px;
+            transition: 0.3s;
+
+            &:nth-child(1) {
+                margin-bottom: 25px;
+            }
+
+            &:hover {
+                transform: scale(1.3);
+            }
+
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__scroll {
+            position: absolute;
+            bottom: 1%;
+            right: 2%;
+            animation: mv__scroll 2s ease-in-out infinite;
+
+        }
+
+        &__anime {
+            position: absolute;
+            left: -20px;
+            bottom: 10px;
+            color: #eee;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: -6px;
+                width: 1px;
+                height: 20px;
+                background: #eee;
+                transform: skewX(-31deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 1px;
+                height: 70px;
+                background: #eee;
+            }
+        }
+    }
+
+    .concept {
+
+        margin-bottom: 200px;
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            text-align: center;
+            margin-bottom: $ma-ttl;
+
+        }
+
+        &__subttl {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            text-align: center;
+            margin-bottom: $ma-subttl;
+        }
+
+        &__txt {
+            font-family: $font-jp;
+            font-size: $fz-txt;
+            letter-spacing: $le-txt;
+            line-height: $lh-concept;
+            width: 704px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    .about {
+        margin-bottom: $ma-sec;
+
+        &__container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        &__box {
+            width: 785px;
+            margin-left: 75px;
+
+        }
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: $ma-ttl;
+
+        }
+
+        &__subttl {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            margin-bottom: $ma-subttl;
+
+        }
+
+        &__txt {
+            font-family: $font-jp;
+            font-size: $fz-txt;
+            letter-spacing: $le-txt;
+            line-height: $lh-txt;
+            margin-bottom: 100px;
+        }
+
+        &__btn {
+            border: 1px solid #C2C2DE;
+            width: 300px;
+            margin-bottom: 15px;
+            border-radius: 30px;
+            transition: 0.5s;
+
+            &:hover {
+                background-image: linear-gradient(-45deg, #6098ff, #70b5ff, #51fff9, #f1fbff, #ffffff);
+                background-size: 400% 400%;
+                animation: footer__btn 5s ease-in-out infinite;
+
+            }
+
+
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            font-family: $font-jp;
+            font-size: $fz-btn;
+            letter-spacing: $le-txt;
+            color: #000;
+            padding: 15px 33px;
+            border-radius: 30px;
+            transition: 0.4s;
+
+        }
+
+        &__txt-2 {
+            font-family: $font-jp;
+            font-size: $fz-txt;
+            letter-spacing: $le-txt;
+            line-height: $lh-txt;
+        }
+    }
+
+
+    .cafe {
+
+        margin-bottom: $ma-sec;
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            text-align: center;
+            margin-bottom: $ma-ttl;
+        }
+
+        &__subttl {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        &__box {
+            width: 400px;
+            border-top: 1px solid #000;
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        &__menuttl {
+            font-family: $font-en;
+            font-size: $fz-cafe-ttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: $ma-ttl;
+        }
+
+        &__menusubttl {
+            font-family: $font-jp;
+            font-size: $fz-cafe-subttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: 20px;
+        }
+
+        &__pic {
+            margin-bottom: 20px;
+        }
+
+        &__txt {
+            font-family: $font-jp;
+            font-size: $fz-txt;
+            letter-spacing: $le-txt;
+            line-height: $lh-menu;
+        }
+
+        &__container-2 {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 90px;
+
+        }
+
+        &__box-2 {
+            width: 337px;
+            text-align: center;
+            border-top: 1px solid #000;
+            padding-top: 25px;
+        }
+
+        &__more {
+            width: 336px;
+            margin: 0 auto;
+            border: 1px solid #C2C2DE;
+            border-radius: 30px;
+            transition: 0.3s;
+
+            &:hover {
+                background-image: linear-gradient(-45deg, #6098ff, #70b5ff, #51fff9, #f1fbff, #ffffff);
+                background-size: 400% 400%;
+                animation: footer__btn 5s ease-in-out infinite;
+
+            }
+
+        }
+
+        &__link {
+            display: block;
+            font-family: $font-en;
+            font-size: $fz-btn;
+            letter-spacing: $le-txt;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #000;
+            padding: 17px 125px;
+            transition: 0.3s;
+
+        }
+
+    }
+
+    .salon {
+        margin-bottom: $ma-sec;
+
+        &__container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+
+        &__box {
+            width: 393px;
+            margin: 0 auto;
+
+        }
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: $ma-ttl;
+
+        }
+
+        &__subttl-jp {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            margin-bottom: 10px;
+
+        }
+
+        &__subttl-en {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            margin-bottom: $ma-subttl;
+
+        }
+
+        &__txt {
+            font-family: $font-jp;
+            font-size: $fz-txt;
+            letter-spacing: $le-txt;
+            line-height: $lh-txt;
+            margin-bottom: 50px;
+
+        }
+
+        &__more {
+            width: 336px;
+            margin-right: 0 auto;
+            border: 1px solid #C2C2DE;
+            border-radius: 30px;
+            transition: 0.3s;
+
+            &:hover {
+                background-image: linear-gradient(-45deg, #6098ff, #70b5ff, #51fff9, #f1fbff, #ffffff);
+                background-size: 400% 400%;
+                animation: footer__btn 5s ease-in-out infinite;
+
+            }
+
+        }
+
+        &__link {
+            display: block;
+            font-family: $font-en;
+            font-size: $fz-btn;
+            letter-spacing: $le-txt;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #000;
+            padding: 17px 125px;
+            transition: 0.4s;
+
+        }
+
+    }
+
+
+    .location {
+        margin-bottom: $ma-sec;
+
+        &__container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        &__box {
+            width: 570px;
+            margin: 0 auto;
+
+        }
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: $ma-ttl;
+
+        }
+
+        &__subttl-jp {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            margin-bottom: 10px;
+
+        }
+
+        &__subttl-en {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            margin-bottom: $ma-subttl;
+
+        }
+
+        &__txt {
+            font-family: $font-jp;
+            font-size: $fz-txt;
+            letter-spacing: $le-txt;
+            line-height: $lh-txt;
+            margin-bottom: 50px;
+
+        }
+
+        &__more {
+            width: 336px;
+            margin-right: 0 auto;
+            border: 1px solid #000;
+            border-radius: 30px;
+            transition: 0.3s;
+
+            &:hover {
+                background-image: linear-gradient(-45deg, #6098ff, #70b5ff, #51fff9, #f1fbff, #ffffff);
+                background-size: 400% 400%;
+                animation: footer__btn 5s ease-in-out infinite;
+
+            }
+
+        }
+
+        &__link {
+            display: block;
+            font-family: $font-en;
+            font-size: $fz-btn;
+            letter-spacing: $le-txt;
+            text-decoration: none;
+            border-radius: 30px;
+            color: #000;
+            padding: 17px 125px;
+            transition: 0.3s;
+
+        }
+
+    }
+
+
+
+    .news {
+
+        margin-bottom: $ma-sec;
+        display: flex;
+        justify-content: flex-end;
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: $ma-ttl;
+        }
+
+        &__subttl {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+        }
+
+        &__container {
+            background: #fff;
+            width: 1427px;
+            padding: 68px 340px 78px 79px;
+
+        }
+
+        &__box-2 {
+            margin-left: 200px;
+            margin-bottom: 75px;
+        }
+
+        &__date {
+            font-family: $font-jp;
+            font-size: $fz-news-txt;
+            letter-spacing: $le-txt;
+            margin-bottom: 30px;
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            padding: 5px 10px;
+            background-image: linear-gradient(90deg, #00e1ff, #0000ff);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 0 1px;
+            transition: background-size 0.3s;
+
+
+            &:hover {
+                background-size: 100% 1px;
+            }
+
+        }
+
+        &__span {
+            margin-left: 25px;
+
+            &:nth-child(7) {
+                margin-left: 50px;
+            }
+
+        }
+
+        &__more {
+            font-family: $font-en;
+            font-size: $fz-btn;
+            letter-spacing: $le-txt;
+            position: relative;
+            right: -300px;
+            width: 85px;
+            margin: 0 auto;
+            padding-bottom: 3px;
+            background-image: linear-gradient(90deg, #00e1ff, #0000ff);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 0 1px;
+            transition: background-size 0.3s;
+
+            &:hover {
+                background-size: 100% 1px;
+            }
+        }
+
+        &__link-2 {
+            display: block;
+            text-decoration: none;
+            color: #000;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 45%;
+                left: -30%;
+                width: 20px;
+                height: 1px;
+                background: #000;
+    
+            }
+        }
+    }
+
+
+    .access {
+        margin-bottom: 120px;
+
+        &__map {
+            margin-bottom: 120px;
+        }
+
+        &__container {
+            width: 830px;
+            margin-left: 683px;
+
+
+        }
+
+        &__ttl {
+            font-family: $font-en;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-ttl;
+            margin-bottom: $ma-ttl;
+            margin-left: 522px;
+
+        }
+
+        &__subttl {
+            font-family: $font-jp;
+            font-size: $fz-subttl;
+            letter-spacing: $ls-subttl;
+            margin-bottom: 10px;
+            margin-left: 522px;
+        }
+
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            gap: 65px;
+            width: 642px;
+            margin-bottom: 40px;
+        }
+
+
+
+        &__txt {
+            font-family: $font-jp;
+            font-size: $fz-accesstxt;
+            letter-spacing: $le-txt;
+
+            &:nth-child(1) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__parking {
+            margin-bottom: 40px;
+            width: 650px;
+        }
+
+        &__ttl-2 {
+            font-family: $font-jp;
+            font-size: $fz-accesstxt;
+            letter-spacing: $le-txt;
+            margin-bottom: 10px;
+
+        }
+
+        &__txt-2 {
+            font-family: $font-jp;
+            font-size: $fz-accesstxt;
+            letter-spacing: $le-txt;
+            line-height: 1.5;
+
+        }
+
+        &__txt-3 {
+            width: 652px;
+            font-family: $font-jp;
+            font-size: $fz-accesstxt;
+            letter-spacing: $le-txt;
+            line-height: 1.5;
+        }
+    }
+}

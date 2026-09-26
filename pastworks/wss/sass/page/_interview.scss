@@ -1,0 +1,533 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#interview {
+
+    .mv {
+
+        height: 160vh;
+
+        &__box {
+            height: 100vh;
+            position: relative;
+        }
+
+        &__container {
+            position: absolute;
+            top: 38%;
+            left: 11%;
+            z-index: 1;
+        }
+
+        &__ttl {
+            font-family: $font-poppins;
+            font-size: 96px;
+            font-weight: $fw-600;
+            letter-spacing: $ls-005;
+            margin-bottom: 83px;
+        }
+
+        &__txt {
+            font-family: $font-notosans;
+            font-size: $fz_top-18px;
+            letter-spacing: $ls-005;
+            position: relative;
+            display: inline-block;
+            padding: 0 55px;
+
+        }
+
+        &__txt::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background-color: #000;
+            left: 0;
+
+        }
+
+
+
+        &__pic-01 {
+            background: url(../images/interview/Vector.png) center center / 100%;
+            width: 735px;
+            height: 620px;
+            position: absolute;
+            top: 17%;
+            right: 15%;
+        }
+
+        &__pic-02 {
+            background: url(../images/top.deco/mv_img2.png) center center / 100%;
+            width: 352px;
+            height: 268px;
+            position: absolute;
+            bottom: 7%;
+            right: 2%;
+
+        }
+
+        &__deco {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        &__img {
+
+            &:nth-child(1) {
+                background: url(../images/top.deco/obj1.png) no-repeat center center / 100%;
+                width: 666px;
+                height: 478px;
+                position: absolute;
+                bottom: -18%;
+                right: 13%;
+            }
+
+
+
+            &:nth-child(2) {
+                background: url(../images/top.deco/obj3.png) no-repeat center center / 100%;
+                width: 1364px;
+                height: 829px;
+                position: absolute;
+                top: -18%;
+                right: -8%;
+            }
+
+            &:nth-child(3) {
+
+                background: url(../images/top.deco/obj2.png) no-repeat center center / 100%;
+                width: 541px;
+                height: 435px;
+                position: absolute;
+                top: 21%;
+                right: -6%;
+            }
+
+            &:nth-child(4) {
+                background: url(../images/top.deco/obj4.png) no-repeat center center / 100%;
+                width: 1024px;
+                height: 954px;
+                position: absolute;
+                top: 8%;
+                left: -19%;
+            }
+
+            &:nth-child(5) {
+                background: url(../images/top.deco/obj5.png) no-repeat center center / 100%;
+                width: 541px;
+                height: 435px;
+                position: absolute;
+                bottom: -6%;
+                left: 0%;
+            }
+
+            &:nth-child(6) {
+                background: url(../images/top.deco/obj6.png) no-repeat center center / 100%;
+                width: 352px;
+                height: 352px;
+                position: absolute;
+                top: 19%;
+                right: 33%;
+            }
+
+            &:nth-child(7) {
+                background: url(../images/top.deco/obj7.png) no-repeat center center / 100%;
+                width: 270px;
+                height: 204px;
+                position: absolute;
+                bottom: -51%;
+                left: 19%;
+            }
+
+            &:nth-child(8) {
+                background: url(../images/top.deco/obj8.png) no-repeat center center / 100%;
+                width: 360px;
+                height: 360px;
+                position: absolute;
+                bottom: -39%;
+                left: 12%;
+            }
+
+        }
+
+    }
+
+    .sec1__container {
+        padding: 0 408px 792px;
+
+    }
+
+    .sec1 {
+        &__ttl {
+            margin-bottom: 65px;
+            font-size: 54px;
+            letter-spacing: .05;
+
+        }
+
+        &__txt {
+            margin-bottom: 45px;
+            letter-spacing: .05;
+            line-height: 3;
+        }
+    }
+
+    .sec1 {
+
+        &__box {
+            position: relative;
+            width: 100%;
+        }
+
+        &__pic1 {
+            position: absolute;
+            top: -50px;
+            right: -419px;
+            width: 350px;
+            height: 240px;
+        }
+
+        &__img1 {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        &__pic2 {
+            position: absolute;
+            top: 100px;
+            left: -408px;
+            width: 100%;
+        }
+
+        &__img2 {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 200px;
+            height: 140px;
+        }
+
+        &__pic3 {
+            position: absolute;
+            top: 207px;
+            right: -11px;
+        }
+
+        &__img3 {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__pic4 {
+            position: absolute;
+            top: 280px;
+            left: 245px;
+
+
+        }
+
+        &__img4 {
+            display: block;
+            object-fit: cover;
+        }
+
+        &__pic5 {
+            position: absolute;
+            top: 440px;
+            left: -248px;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        &__img5 {
+            display: block;
+            object-fit: cover;
+            width: 350px;
+            height: 250px;
+        }
+    }
+
+    .sec2 {
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1980px;
+            display: block;
+            background: #EEF4FF;
+            position: absolute;
+            bottom: -356%;
+            left: 0;
+            transform: rotate(-6deg);
+            border-radius: 230px 0 230px 0;
+            z-index: -1;
+        }
+
+        &__container {
+            width: 1320px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-bottom: 100px;
+            // align-items: center;
+            // flex-wrap: wrap;
+        }
+
+        &__box {
+            .cta {
+                height: 70px;
+                border: none;
+                background: none;
+                display: flex;
+                align-items: center;
+            }
+
+            .cta span {
+                padding: 26px 0;
+                margin-right: 15px;
+                text-transform: uppercase;
+            }
+
+            .cta div {
+                transform: translateX(-8px);
+                transition: all 0.3s ease;
+            }
+
+            .cta:hover div {
+                transform: translateX(0);
+            }
+
+            .cta:active div {
+                transform: scale(0.9);
+            }
+
+            .btn {
+                text-decoration: none;
+                width: 168px;
+                display: block;
+                text-decoration: none;
+                position: relative;
+
+                &__pic {
+                    background: url(../images/logo/arrow11.png);
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    top: -26px;
+                    right: -12px;
+                }
+            }
+
+            .txt {
+                position: relative;
+                color: black;
+                padding-bottom: 20px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 29%;
+                    left: 0;
+                    background-color: #000000;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+            }
+
+            .cta:hover .txt:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            &__box {
+                width: 50%;
+            }
+
+            &__link {
+                margin-left: 215px;
+            }
+        }
+
+        &__ttl {
+            border-left: 4px solid #000;
+            padding-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            margin-left: 217px;
+            margin-bottom: 100px;
+            font-size: 32px;
+        }
+
+        &__txt {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        &__small__txt {
+            padding-left: 20px;
+        }
+
+        &__link {
+            text-decoration: none;
+        }
+
+        &__pic1 {
+            width: 100%;
+            // height: 100%;
+            margin-bottom: 50px;
+        }
+
+        &__img1 {
+            display: block;
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        &__pic2 {
+            width: 100%;
+            // height: 100%;
+            margin-bottom: 50px;
+        }
+
+        &__img2 {
+            display: block;
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        &__pic3 {
+            width: 100%;
+            // height: 100%;
+            margin-bottom: 50px;
+        }
+
+        &__img3 {
+            display: block;
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        &__name {
+            margin-bottom: 50px;
+        }
+
+    }
+
+    .sec3 {
+
+        // padding: 210px 0;
+        &__txt {
+            font-size: 20px;
+            line-height: 3;
+            letter-spacing: .5;
+            margin-bottom: 50px;
+        }
+
+        &__ttl {
+            border-left: 4px solid #000;
+            padding-top: 5px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            margin-left: 210px;
+            font-size: 32px;
+            margin-bottom: 100px;
+        }
+
+        &__container {
+            width: 1463px;
+            margin: auto;
+            gap: 145px;
+            display: flex;
+        }
+
+        .btn {
+            width: 168px;
+            display: block;
+            text-decoration: none;
+            position: relative;
+
+            &__pic {
+                background: url(../images/logo/arrow11.png);
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: -26px;
+                right: -12px;
+            }
+        }
+
+        .cta {
+            height: 70px;
+            border: none;
+            background: none;
+            display: flex;
+            align-items: center;
+            margin-left: 210px;
+            margin-bottom: 210px;
+        }
+
+        .cta span {
+            padding: 26px 0;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+
+        .cta div {
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+        }
+
+        .cta:hover div {
+            transform: translateX(0);
+        }
+
+        .cta:active div {
+            transform: scale(0.9);
+        }
+
+        .txt {
+            position: relative;
+            color: black;
+            padding-bottom: 20px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 29%;
+                left: 0;
+                background-color: #000000;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+        }
+
+        .cta:hover .txt:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        &__box {
+            width: 50%;
+        }
+
+        &__link {
+            margin-left: 215px;
+        }
+    }
+}

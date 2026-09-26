@@ -1,0 +1,119 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__ttl {
+        font-family: $f-en;
+        font-size: 14px;
+        margin: 13px 0 0 13px;
+
+        @media screen and (min-width: 768px) {
+          font-size: 21px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          font-size: 30px;
+        }
+    }
+
+    &__link {
+        display: block;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 2px solid #000;
+
+        @media screen and (min-width: 768px) {
+            border-bottom: 3px solid #000;
+        }
+    }
+
+    &__bgbtn {
+        width: 52px;
+        height: 52px;
+        background: #000;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        @media screen and (min-width: 768px) {
+          width: 76px;
+          height: 76px;
+        }
+
+    }
+
+    &__btntxt {
+        @include bgtxtBase;
+        color: #fff;
+
+        @media screen and (min-width: 768px) {
+          font-size: 18px;
+        }
+    }
+
+    &__btnline {
+        position: absolute;
+        display: block;
+        top: 67%;
+        width: 62%;
+        height: 3px;
+        background: #ffffff;
+
+        @media screen and (min-width: 768px) {
+          width: 52%;
+        }
+    }
+}
+
+.slidemenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58%;
+    height: 100vh;
+    padding: 165px 115px 50px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 20%;
+    }
+
+    &__logo {
+        width: 160px;
+
+        @media screen and (min-width: 768px) {
+          width: 253px;
+        }
+    }
+
+    &__img {
+        @include imgBase;
+    }
+}

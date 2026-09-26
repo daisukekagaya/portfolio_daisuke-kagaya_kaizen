@@ -1,0 +1,739 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    .mv {
+
+        &__up {
+            background: url(../images/mv1.jpg) center 47% / cover;
+            height: 73vh;
+            margin-bottom: 5px;
+            animation: slideinYtop 0.4s ease;
+
+            @media screen and (min-width: 1024px) {
+                height: 59vh;
+            }
+        }
+
+        &__ttl {
+            background-image: url(../images/pmp2.png);
+            background-size: cover;
+            height: 12vh;
+            margin: 0 1%;
+            margin-bottom: 90px;
+            opacity: 0;
+            animation: slideinYunder 0.4s ease 0.4s forwards;
+
+
+            @media screen and (min-width: 768px) {
+                height: 17vh;
+            }
+
+            @media screen and (min-width: 1024px) {
+                height: 23vh;
+                position: relative;
+                bottom: 75px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                height: 28vh;
+            }
+
+            @media screen and (min-width: 1500px) {
+                height: 42vh;
+            }
+
+        }
+    }
+
+    .about {
+        position: relative;
+        margin-bottom: 120px;
+
+        &__mv {
+            background: url(../images/mv1.jpg) center 100%/ cover;
+            height: 49vh;
+            transition: 0.3s;
+
+            @media screen and (min-width: 768px) {
+                background-position: center 100%;
+                height: 69vh;
+            }
+
+            @media screen and (min-width: 1024px) {
+                background-position: center 84%;
+            }
+        }
+
+        &__box {
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 76px;
+            width: 30%;
+            height: 49vh;
+
+            @media screen and (min-width: 768px) {
+                margin-left: 9%;
+                padding: 70px 0;
+                width: 36%;
+                height: 69vh;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-left: 17%;
+                width: 14%;
+            }
+
+        }
+
+        &__ttl-en,
+        &__ttl {
+            writing-mode: vertical-rl;
+
+        }
+
+        &__ttl-en {
+            font-family: $f-en_min;
+            font-size: 12px;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+        }
+
+        &__ttl {
+            font-family: $f-jp;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+
+            @media screen and (min-width: 768px) {
+                font-size: 42px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: 50px;
+            }
+        }
+
+        &__box-2 {
+            position: relative;
+            top: -37px;
+            left: 46px;
+            width: fit-content;
+            transition: 0.3s;
+
+            @media screen and (min-width: 768px) {
+                left: 188px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                left: 23%;
+                margin-bottom: 100px;
+            }
+        }
+
+        &__catch,
+        &__catch-2 {
+            background: #000;
+            color: #fff;
+            font-family: $f-jp;
+            font-size: $fz-about-catch;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-about-catch__t;
+            }
+        }
+
+        &__catch {
+            width: 229px;
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 768px) {
+                width: 320px;
+            }
+        }
+
+        &__catch-2 {
+            width: 293px;
+
+            @media screen and (min-width: 768px) {
+                width: 400px;
+            }
+        }
+
+        &__txt {
+            font-family: $f-jp;
+            font-size: $fz-toptxt;
+            font-weight: 700;
+            line-height: $lh-about__txt;
+            width: 85%;
+            margin: 0 0 0 45px;
+            transition: 0.3s;
+
+            @media screen and (min-width: 768px) {
+                width: 70%;
+                margin: 0 5% 0 25%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 48%;
+                margin: 0 5% 0 47%;
+            }
+        }
+
+        &__animebox {
+            position: relative;
+            top: -67px;
+            overflow: hidden;
+            z-index: -1;
+            transition: 0.3s;
+
+        }
+
+        &__anime-1 {
+            font-family: $f-en;
+            font-size: 180px;
+            width: 2000px;
+            color: #fff;
+            overflow: hidden;
+            -webkit-text-stroke: 1px #000;
+            animation: infinityloop 20s linear infinite;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 240px;
+                width: 180%;
+            }
+        }
+
+        &__anime-2 {
+            position: absolute;
+            top: 0;
+            right: -400px;
+            font-family: $f-en;
+            font-size: 180px;
+            width: 2000px;
+            color: #fff;
+            overflow: hidden;
+            -webkit-text-stroke: 1px #000;
+            animation: infinityloop 20s -5s linear infinite;
+
+            @media screen and (min-width: 1024px) {
+                right: 50%;
+                width: 180%;
+                font-size: 240px;
+            }
+        }
+    }
+
+
+    .works {
+        margin-bottom: 120px;
+        overflow: hidden;
+
+        &__ttl {
+            @include secttlBase;
+            margin-bottom: 50px;
+            transition: 0.6s;
+
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+                margin-bottom: 60px;
+
+                &::after {
+                    top: 5px;
+                    height: 48px;
+                    width: 79%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 88%;
+                }
+            }
+
+            @media screen and (min-width: 1500px) {
+                &::after {
+                    width: 92%;
+                }
+            }
+        }
+
+        &__wrap {
+            margin-bottom: 90px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 100px;
+            }
+        }
+
+        &__container {
+            margin-bottom: 40px;
+            transition: 0.3s;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 5px;
+            }
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            color: #000;
+
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                align-items: center;
+
+                filter: grayscale(100%);
+                transition: 0.3s;
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+        }
+
+        &__pic {
+            margin-bottom: 15px;
+
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 30px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 57%;
+            }
+        }
+
+        &__img {
+            @include imgBase;
+        }
+
+        &__box {
+            @media screen and (min-width: 768px) {
+                width: 558px;
+                margin-left: 80px;
+            }
+        }
+
+
+        &__subttl {
+            font-family: $f-en;
+            font-size: $fz-topabout-ttl__s;
+            margin-bottom: 10px;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topabout-ttl__t;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__position {
+            font-family: $f-en_min;
+            font-size: 14px;
+            color: #fff;
+            background: #000;
+            text-align: center;
+            padding: 3px;
+            width: 96px;
+            margin-bottom: 10px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &__txt {
+            font-family: $f-jp;
+            font-size: $fz-toptxt;
+            line-height: 1.5;
+        }
+
+        &__btnbox {
+            transition: 0.2s
+        }
+
+        &__link-2 {
+            @include btnBase;
+            position: relative;
+            text-decoration: none;
+            color: #000;
+            // width: 248px;
+            margin: 0 auto;
+            transition: 0.3s;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+
+                .works__arrow {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+
+        &__more-2 {
+            font-family: $f-en;
+            font-size: 15px;
+            width: 100px;
+        }
+
+        &__arrow {
+            @include arrowBase;
+        }
+    }
+
+
+    .skills {
+        overflow: hidden;
+        margin-bottom: 120px;
+
+        &__ttl {
+            @include secttlBase;
+            margin-bottom: 50px;
+            transition: 0.6s;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+                margin-bottom: 60px;
+
+                &::after {
+                    top: 5px;
+                    height: 48px;
+                    width: 82%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 89%;
+                }
+            }
+
+            @media screen and (min-width: 1500px) {
+
+                &::after {
+                    width: 93%;
+                }
+            }
+        }
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media screen and (min-width: 1024px) {
+                padding: 0 10%;
+            }
+        }
+
+        &__box {
+            background: $bg-cl;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 319px;
+            padding: 30px 30px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+            transition: 0.3s;
+
+            @media screen and (min-width: 768px) {
+                margin: 0 30px 30px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                // margin: 0 40px 80px;
+                margin: 0 2% 6%;
+                width: 28%;
+                // padding: 75px 0px;
+                padding: 75px 0px;
+                padding: 5% 0;
+            }
+        }
+
+        &__icon {
+            width: 142px;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: 1024px) {
+                width: 49%;
+            }
+        }
+
+        &__img {
+            @include imgBase;
+        }
+
+        &__txt {
+            font-family: $f-jp;
+            width: 70%;
+            line-height: 2;
+        }
+    }
+
+    .profile {
+        background: #000;
+        padding: 30px 0;
+        margin-bottom: 250px;
+
+        @media screen and (min-width: 1024px) {
+            padding: 190px 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 300px;
+        }
+
+        &__wrap {
+            width: 261px;
+            margin: 0 auto;
+
+            @media screen and (min-width: 768px) {
+                width: 583px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 65%;
+            }
+        }
+
+        &__namebox {
+            transition: 0.2s;
+        }
+
+        &__ttl {
+            font-family: $f-en;
+            font-size: $fz-topttl;
+            color: $cl-proftxt;
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+            }
+        }
+
+        &__subttl {
+            font-family: $f-jp;
+            font-size: 10px;
+            font-weight: 700;
+            color: $cl-proftxt;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 15px;
+                margin-bottom: 50px;
+            }
+        }
+
+        &__name {
+            font-family: $f-jp;
+            font-size: 18px;
+            font-weight: 700;
+            color: $cl-proftxt;
+            margin-bottom: 30px;
+        }
+
+        &__txtbox {
+            margin-bottom: 100px;
+            transition: 0.2s;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 140px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &__txt {
+            font-family: $f-jp;
+            font-size: $fz-toptxt;
+            font-weight: 700;
+            line-height: 2;
+            color: $cl-proftxt;
+            width: 261px;
+            margin: 0 auto 50px;
+
+            @media screen and (min-width: 768px) {
+                width: 583px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 39%;
+                margin: 0;
+            }
+        }
+
+        &__pic {
+            width: 90%;
+            margin: 0 auto;
+
+            @media screen and (min-width: 768px) {
+                width: 80%;
+                height: 70vh;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 49%;
+                height: 42vh;
+                margin: 0;
+            }
+        }
+
+        &__img {
+            @include imgBase;
+        }
+
+        &__personttl {
+            font-family: $f-en;
+            font-size: $fz-topttl;
+            color: $cl-proftxt;
+            margin-bottom: 15px;
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+            }
+        }
+
+        &__personsubttl {
+            font-family: $f-jp;
+            font-size: 10px;
+            font-weight: 700;
+            color: $cl-proftxt;
+            margin-bottom: 30px;
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 15px;
+                margin-bottom: 60px;
+            }
+        }
+
+        &__surclewrap {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__surclebox {
+            width: 230px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media screen and (min-width: 1024px) {
+                width: 27%;
+            }
+        }
+
+        &__personbox-2 {
+            transition: 0.2s;
+        }
+
+        &__surclebox {
+            transition: 0.2s;
+        }
+
+        &__surclettl {
+            font-family: $f-jp;
+            font-size: $fz-topttl;
+            font-weight: 700;
+            line-height: 1.5;
+            background: #fff;
+            width: 229px;
+            height: 229px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 10px;
+            margin-bottom: 25px;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 35px;
+            }
+        }
+
+        &__surcletxt {
+            font-family: $f-jp;
+            font-size: $fz-toptxt;
+            color: $cl-proftxt;
+            line-height: 2;
+        }
+
+        &__animebox {
+            position: relative;
+            bottom: -132px;
+            overflow: hidden;
+            z-index: 1;
+
+            @media screen and (min-width: 1024px) {
+                top: 323px;
+            }
+        }
+
+        &__anime-1 {
+            font-family: $f-en;
+            font-size: 180px;
+            width: 2000px;
+            color: #fff;
+            overflow: hidden;
+            -webkit-text-stroke: 1px #000;
+            animation: infinityloop 20s linear infinite;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 240px;
+                width: 190%;
+            }
+
+        }
+
+        &__anime-2 {
+            position: absolute;
+            top: 0;
+            right: -280px;
+            font-family: $f-en;
+            font-size: 180px;
+            width: 2000px;
+            color: #fff;
+            overflow: hidden;
+            -webkit-text-stroke: 1px #000;
+            animation: infinityloop 20s -5s linear infinite;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 240px;
+                width: 190%;
+                right: 7%;
+            }
+
+        }
+    }
+}

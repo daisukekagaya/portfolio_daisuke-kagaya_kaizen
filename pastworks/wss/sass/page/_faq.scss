@@ -1,0 +1,555 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#faq {
+    .mv {
+        height: 100vh;
+        position: relative;
+
+        &__dec {
+            &:nth-child(1) {
+                background: url(../images/opco/op__dec1.png) no-repeat center center / 100%;
+                width: 339px;
+                height: 435px;
+                position: absolute;
+                top: 304px;
+                left: -0px;
+            }
+
+            &:nth-child(2) {
+                background: url(../images/opco/op__dec2.png) no-repeat center center / 100%;
+                width: 352px;
+                height: 352px;
+                position: absolute;
+                top: 225px;
+                left: 60px;
+            }
+
+            &:nth-child(3) {
+                background: url(../images/opco/op__dec3.png) no-repeat center center / 100%;
+                width: 185px;
+                height: 352px;
+                position: absolute;
+                top: 709px;
+                left: 0px;
+            }
+
+            &:nth-child(4) {
+                background: url(../images/opco/op__dec11.png) no-repeat center center / 100%;
+                width: 542px;
+                height: 238px;
+                position: absolute;
+                top: 0px;
+                left: 600px;
+            }
+
+            &:nth-child(5) {
+                background: url(../images/opco/op__dec12.png) no-repeat center center / 100%;
+                width: 352px;
+                height: 196px;
+                position: absolute;
+                top: 0px;
+                left: 772px;
+            }
+
+            &:nth-child(6) {
+                background: url(../images/opco/op__dec13.png) no-repeat center center / 100%;
+                width: 352px;
+                height: 352px;
+                position: absolute;
+                top: 242px;
+                left: 904px;
+            }
+
+            &:nth-child(7) {
+                background: url(../images/opco/op__dec21.png) no-repeat center center / 100%;
+                width: 541px;
+                height: 435px;
+                position: absolute;
+                top: 304px;
+                left: 1339px;
+            }
+
+            &:nth-child(8) {
+                background: url(../images/opco/op__dec22.png) no-repeat center center / 100%;
+                width: 352px;
+                height: 352px;
+                position: absolute;
+                top: 399px;
+                left: 1443px;
+            }
+
+            &:nth-child(9) {
+                background: url(../images/opco/op__dec23.png) no-repeat center center / 100%;
+                width: 244px;
+                height: 341px;
+                position: absolute;
+                top: 629px;
+                left: 1506px;
+            }
+        }
+
+        &__catch {
+            position: relative;
+            top: 38%;
+            left: 200px;
+        }
+
+        &__ttl {
+            font-size: 96px;
+            font-weight: 600;
+            font-family: $font-poppins;
+            margin-bottom: 83px;
+        }
+
+        &__txt {
+            padding-left: 65px;
+            font-size: 18px;
+            font-weight: 400;
+            position: relative;
+
+            &::before {
+                content: "";
+                background: url(../images/opco/op__befor.png);
+                width: 40px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%)
+            }
+        }
+    }
+
+    .sec1 {
+
+        &__box {
+            padding-bottom: 180px;
+        }
+
+        &__ttl {
+            padding: 7px 0 7px 35px;
+            font-size: $fz_faq-32px;
+            letter-spacing: $ls-005;
+            position: relative;
+
+            &::before {
+                content: "";
+                background: #000;
+                width: 5px;
+                height: 48px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__txt {
+            font-size: $fz_faq-20px;
+            letter-spacing: $ls-005;
+            line-height: $lh-20;
+        }
+
+    }
+
+    .sec2 {
+        padding-bottom: 180px;
+
+        &__ttl {
+            margin-bottom: 100px;
+            padding: 7px 0 7px 35px;
+            font-size: $fz_faq-32px;
+            letter-spacing: $ls-005;
+            position: relative;
+
+            &::before {
+                content: "";
+                background: #000;
+                width: 5px;
+                height: 48px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+        &__a {
+            font-family: $font-poppins;
+            font-size: $fz_faq-50px;
+            letter-spacing: $ls-005;
+            padding-right: 22px;
+        }
+
+        &__q {
+            font-family: $font-poppins;
+            font-size: $fz_faq-50px;
+            letter-spacing: $ls-005;
+            padding: 0 22px 0 50px;
+        }
+
+        &__inner {
+            padding: 38px 58px 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__txt {
+            font-size: $fz_faq-20px;
+            line-height: $lh-20;
+            letter-spacing: $ls-005;
+        }
+
+        &__toggle {
+            display: none;
+
+            &:checked + .sec2__question + .sec2__anser {
+                max-height: 500px;
+                transition: all 1.5s;
+            }
+        }
+
+        &__faq {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        &__question {
+            font-size: $fz_faq-27px;
+            transform: translateZ(0);
+            transition: all 0.3s;
+            background: $clr-faq-blue;
+            border-radius: 40px 0 40px 0;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            font-size: $fz_faq-27px;
+            letter-spacing: $ls-005;           
+
+            span {
+                padding: 0 22px 0 50px;
+                font-size: $fz_faq-50px;
+                font-family: $font-poppins;
+                letter-spacing: $ls-005;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 58px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                transition: all .3s;
+                transform: rotate(90deg);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 58px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                transition: all .3s;
+            }
+        }
+
+        &__anser {
+            transform: translateZ(0);
+            transition: all 0.3s;
+            max-height: 0;
+            overflow: hidden;
+            
+            div {
+                font-size: $fz_faq-20px;
+                padding: 38px 56px 100px;
+                letter-spacing: $ls-005;
+                line-height: $lh-20;
+                display: flex;
+                align-items: center;
+            }
+
+            span {
+                padding-right: 22px;
+                font-size: $fz_faq-50px;
+                font-family: $font-poppins;
+            }
+
+
+        }
+    }
+    .sec3 {
+        padding-bottom: 180px;
+
+        &__ttl {
+            margin-bottom: 100px;
+            padding: 7px 0 7px 35px;
+            font-size: $fz_faq-32px;
+            letter-spacing: $ls-005;
+            position: relative;
+
+            &::before {
+                content: "";
+                background: #000;
+                width: 5px;
+                height: 48px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+        &__a {
+            font-family: $font-poppins;
+            font-size: $fz_faq-50px;
+            letter-spacing: $ls-005;
+            padding-right: 22px;
+        }
+
+        &__q {
+            font-family: $font-poppins;
+            font-size: $fz_faq-50px;
+            letter-spacing: $ls-005;
+            padding: 0 22px 0 50px;
+        }
+
+        &__inner {
+            padding: 38px 58px 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__txt {
+            font-size: $fz_faq-20px;
+            line-height: $lh-20;
+            letter-spacing: $ls-005;
+        }
+
+        &__toggle {
+            display: none;
+
+            &:checked + .sec3__question + .sec3__anser {
+                max-height: 500px;
+                transition: all 1.5s;
+            }
+        }
+
+        &__faq {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        &__question {
+            font-size: $fz_faq-27px;
+            transform: translateZ(0);
+            transition: all 0.3s;
+            background: $clr-faq-blue;
+            border-radius: 40px 0 40px 0;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            font-size: $fz_faq-27px;
+            letter-spacing: $ls-005;           
+
+            span {
+                padding: 0 22px 0 50px;
+                font-size: $fz_faq-50px;
+                font-family: $font-poppins;
+                letter-spacing: $ls-005;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 58px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                transition: all .3s;
+                transform: rotate(90deg);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 58px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                transition: all .3s;
+            }
+        }
+
+        &__anser {
+            transform: translateZ(0);
+            transition: all 0.3s;
+            max-height: 0;
+            overflow: hidden;
+            
+            div {
+                font-size: $fz_faq-20px;
+                padding: 38px 56px 100px;
+                letter-spacing: $ls-005;
+                line-height: $lh-20;
+                display: flex;
+                align-items: center;
+            }
+
+            span {
+                padding-right: 22px;
+                font-size: $fz_faq-50px;
+                font-family: $font-poppins;
+            }
+
+
+        }
+    }
+    .sec4 {
+        padding-bottom: 180px;
+
+        &__ttl {
+            margin-bottom: 100px;
+            padding: 7px 0 7px 35px;
+            font-size: $fz_faq-32px;
+            letter-spacing: $ls-005;
+            position: relative;
+
+            &::before {
+                content: "";
+                background: #000;
+                width: 5px;
+                height: 48px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+        &__a {
+            font-family: $font-poppins;
+            font-size: $fz_faq-50px;
+            letter-spacing: $ls-005;
+            padding-right: 22px;
+        }
+
+        &__q {
+            font-family: $font-poppins;
+            font-size: $fz_faq-50px;
+            letter-spacing: $ls-005;
+            padding: 0 22px 0 50px;
+        }
+
+        &__inner {
+            padding: 38px 58px 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__txt {
+            font-size: $fz_faq-20px;
+            line-height: $lh-20;
+            letter-spacing: $ls-005;
+        }
+
+        &__toggle {
+            display: none;
+
+            &:checked + .sec4__question + .sec4__anser {
+                max-height: 500px;
+                transition: all 1.5s;
+            }
+        }
+
+        &__faq {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        &__question {
+            font-size: $fz_faq-27px;
+            transform: translateZ(0);
+            transition: all 0.3s;
+            background: $clr-faq-blue;
+            border-radius: 40px 0 40px 0;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            font-size: $fz_faq-27px;
+            letter-spacing: $ls-005;           
+
+            span {
+                padding: 0 22px 0 50px;
+                font-size: $fz_faq-50px;
+                font-family: $font-poppins;
+                letter-spacing: $ls-005;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 58px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                transition: all .3s;
+                transform: rotate(90deg);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 58px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                transition: all .3s;
+            }
+        }
+
+        &__anser {
+            transform: translateZ(0);
+            transition: all 0.3s;
+            max-height: 0;
+            overflow: hidden;
+            
+            div {
+                font-size: $fz_faq-20px;
+                padding: 38px 56px 100px;
+                letter-spacing: $ls-005;
+                line-height: $lh-20;
+                display: flex;
+                align-items: center;
+            }
+
+            span {
+                padding-right: 22px;
+                font-size: $fz_faq-50px;
+                font-family: $font-poppins;
+            }
+
+
+        }
+    }
+}

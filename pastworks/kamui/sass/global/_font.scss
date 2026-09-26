@@ -1,0 +1,35 @@
+//フォントに関する変数を登録します
+
+
+// フォント
+$font-en: "neue-haas-grotesk-display", sans-serif;  //英語のフォント
+$font-jp: "Shippori Mincho", serif;  //日本語のフォント
+$font-date: "Noto Serif JP", serif;  //newsの日付フォント
+$font-reservation: "Noto Serif JP", serif;  //reservationボタンのフォント
+
+// フォントウェイト
+$fw-date: 700;  //newsの日付フォントウェイト
+$fw-reservation: 700;  //reservationボタンのフォントウェイト
+
+// 文字間
+$ls-nav: 0.2em;  // navのもじかん
+$ls-reserve: 0.2em;  //reserveボタンの文字間
+$ls-ttl: 0.15em;  //各セクションタイトルの文字間
+$ls-txt: 0.1em;  //各セクションテキストの文字間
+$ls-more: 0.2em;  //moreボタンの文字間
+
+// 行間
+
+$lh-txt: 2;
+
+// フォントの大きさ
+$fz-nav: 16px;  //nav
+$fz-res: 16px;  //resrveボタン
+$fz-ttl: 24px;  //タイトル
+$fz-subttl: 20px;  //サブタイトル
+$fz-txt: 16px;  //テキスト
+$fz-more: 14px;  //moreボタン
+$fz-date: 15px;  //newsの日付
+$fz-reservation: 100px;  //サイト下のmake reservation
+$fz-contact: 40px;  //contact
+$fz-fcopy: 12px;

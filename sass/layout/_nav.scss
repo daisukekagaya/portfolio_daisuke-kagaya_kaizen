@@ -1,0 +1,56 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.slidegnav {
+    margin-bottom: 260px;
+    // transform: translateX(100%);
+
+    &__list {
+        @include gnavBase;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+        padding: 5px 15px;
+
+        background-image: linear-gradient(90deg, #000000, #000000);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 0 5px;
+        transition: background-size 0.2s;
+
+        &:hover {
+            background-size: 100% 5px;
+        }
+    }
+}
+
+.fnav {
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+      
+    }
+
+    &__link {
+        @include fnavBase;
+        text-decoration: none;
+        color: #000;
+        padding: 5px 10px 5px 0;
+        transition: 0.2s;
+
+        &:hover {
+            color: #7c7c7c;
+        }
+
+        @media screen and (min-width: 1024px) {
+          font-size: 20px;
+        }
+       
+    }
+}

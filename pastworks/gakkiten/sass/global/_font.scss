@@ -1,0 +1,38 @@
+//フォントに関する変数を登録します
+
+// フォント
+
+$font-en: "Nunito Sans";  //英語フォント
+$font-jp: "Yu Gothic";  //日本語フォント
+
+// 文字色
+
+$header-cl: #000;  //navの文字色
+$modal-cl: #fff;  //モーダルウィンドウの文字色
+
+//フォントウェイト
+$fw-ttl: 700;  //各セクションタイトルのフォントウェイト
+
+//行間
+
+$lh-txt: 2;
+
+//文字間
+$ls-subttl: 0.1em;
+$ls-txt: 0.05em;
+$ls-more: 0.05em;
+
+// フォントサイズ
+
+$fz-nav: 14px; //navのフォントサイズ
+$fz-slttl: 40px; //スライドメニューのフォントサイズ
+$fz-mvttl: 48px; //mvタイトルのフォントサイズ
+$fz-mvsub: 20px;  //mvの英語タイトルのサイズ
+$fz-enttl: 14px;  //各セクションの英語タイトルサイズ
+$fz-jpttl: 32px;  //各セクションの日本語タイトルサイズ
+$fz-modttl: 25px;  //モーダルのタイトルサイズ
+$fz-txt: 15px;  //各セクションのテキストサイズ
+$fz-more: 15px;  //各セクションのmoreのサイズ
+$fz-date: 20px;  //Newsセクションの日付のサイズ
+$fz-copy: 12px;  //footerのコピーライトのサイズ
+

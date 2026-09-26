@@ -1,0 +1,91 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.footer {
+    &__wrap {
+        background: $col-sec;
+        padding: 120px 0;
+        transition: 0.3s;
+    }
+    
+    &__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        margin: 0 auto;
+
+    }
+
+    &__box {
+        text-align: center;
+    }
+
+    &__ttl {
+        font-family: $f-jp;
+        font-size: 18px;
+        letter-spacing: $ls-all;
+        margin-bottom: 20px;
+    }
+
+    &__txt {
+        font-family: $f-jp;
+        font-size: $fz-txt;
+        letter-spacing: $ls-all;
+        margin-bottom: 20px;
+    }
+
+    &__link-2 {
+        color: #000;
+        transition: 0.5s;
+
+        &:hover {
+            color: #001aff;
+        }
+    }
+
+    &__wrap-2 {
+        background: $col-footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 47px 60px;
+    }
+
+    &__sns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo-2 {
+        width: 35px;
+        height: 35px;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.5, 1.5);
+        }
+
+    }
+ 
+    &__img-2 {
+        @include imgBase($objectfit:contain);
+        padding: 5px;
+
+    }
+
+    &__copy {
+        font-family: $f-en;
+        font-size: $fz-txt;
+        letter-spacing: $ls-all;
+
+    }
+}

@@ -1,0 +1,104 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+.gnav {
+  display: flex;
+  align-items: center;
+
+  &__nav {
+    display: flex;
+  }
+
+  &__list {
+    margin-left: 57px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $font-poppins;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      bottom: 17%;
+      left: 0;
+      transform: scale(0, 1);
+      transition: transform 0.2s;
+    }
+
+    &:hover {
+      &::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  .sns {
+    width: 61px;
+    margin-left: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      background: url(../images/srash.svg) center center / cover;
+      width: 8px;
+      height: 13px;
+      position: absolute;
+      top: 15%;
+      left: 40%;
+    }
+
+    &__icon {
+      transition: 0.4s;
+      
+      &:hover {
+        transform: scale(1.3, 1.3);
+        transition: transform 0.4s ease;
+      }
+    }
+
+    &__svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .contact {
+    &__link {
+      display: block;
+      margin-left: 34px;
+      padding: 14px 50px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 100vh;
+      position: relative;
+      background: linear-gradient(
+        90deg,
+        rgb(63 92 255) 0%,
+        rgb(48 198 255) 50%,
+        rgb(21 87 255) 100%
+      );
+      background-size: 200% 100%;
+      border: none;
+      transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+
+      &:hover {
+        background-position: 100% 0;
+      }
+    }
+  }
+}
+    

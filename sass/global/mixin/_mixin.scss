@@ -1,0 +1,64 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+
+@mixin bgtxtBase {
+    font-family: $f-en;
+    font-size: $fz-hbg;
+}
+
+@mixin gnavBase {
+    font-family: $f-en;
+    font-size: $fz-gnav;
+}
+
+@mixin secttlBase {
+    position: relative;
+    font-family: $f-en;
+    font-size: $fz-topttl;
+    margin-left: 10px;
+    margin-bottom: 40px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: 0;
+        height: 20px;
+        width: 81%;
+        background: #000;
+    }
+}
+
+@mixin btnBase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $f-en;
+    border: 1px solid #000;
+    width: 248px;
+    padding: 15px 25px;
+    margin: 0 auto;
+}
+
+@mixin arrowBase {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+}
+
+@mixin imgBase {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin fnavBase {
+    font-family: $f-en;
+    font-size: $fz-fnav;
+}

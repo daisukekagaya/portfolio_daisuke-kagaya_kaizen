@@ -1,0 +1,522 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+
+#top {
+
+    .mv {
+        position: relative;
+        margin-bottom: $ma-sec;
+
+        &__mv {
+            background: url(../images/mv.png) center top / cover;
+            height: 100vh;
+        }
+
+        &__ttl {
+            position: absolute;
+            top: 20%;
+            left: 29%;
+            font-family: $f-en;
+            font-size: $fz-mv__ttl;
+            font-weight: $fw-ttl;
+            letter-spacing: $ls-mv;
+            width: 6.5ch;
+            animation: typing 2s steps(14), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+
+        }
+
+        &__subttl {
+            position: absolute;
+            top: 47%;
+            left: 32%;
+            font-family: $f-en;
+            font-size: $fz-mv__subttl;
+            letter-spacing: $ls-mv;
+
+            width: 17.5ch;
+            animation: typing 2s steps(14), blink .5s step-end infinite alternate;
+
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+
+        }
+    }
+
+
+    .about {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 0 584px 0 300px;
+        height: 1093px;
+        margin-bottom: $ma-sec;
+
+        &__subttl-en {
+            @include subttlenBase;
+            margin-bottom: 30px;
+
+        }
+
+        &__container {
+            width: 67%;
+            transition: 0.3s;
+            z-index: 1;
+
+        }
+
+        &__catch {
+            font-family: $f-jp;
+            font-size: 70px;
+            letter-spacing: .3em;
+            line-height: 1.5;
+            width: 112%;
+            margin-bottom: 30px;
+
+        }
+
+        &__ttl-jp {
+            @include subttljpBase;
+            margin-bottom: 30px;
+
+        }
+
+        &__txt {
+            @include txtBase;
+            width: 74%;
+            margin-bottom: 40px;
+
+        }
+
+        &__box {
+            width: 200px;
+            gap: 5px;
+
+        }
+
+        &__links {
+            display: block;
+
+        }
+
+        &__more {
+            @include btntxtBase;
+            margin-right: 10px;
+
+        }
+
+        &__link {
+            display: block;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            transition: 0.3s;
+
+            &:hover {
+                color: #acacac;
+            }
+        }
+
+        &__btn {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border: 1px solid $col-btn;
+            border-radius: 50%;
+            background: $col-btn;
+            transition: 0.3s;
+
+            &:hover {
+                background: #acacac;
+                border:1px solid #acacac;
+            }
+
+        }
+
+        &__arrow-1 {
+            display: block;
+            position: absolute;
+            top: 47%;
+            left: 21%;
+            border-top: 1px solid #ffffff;
+            width: 32px;
+
+
+        }
+
+        &__arrow-2 {
+            display: block;
+            position: absolute;
+            top: 35%;
+            left: 47%;
+            border-top: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            width: 14px;
+            height: 14px;
+            transform: rotate(45deg);
+
+        }
+
+        &__pic {
+            border-radius: 50% 50% 0 0;
+            overflow: hidden;
+            width: 730px;
+            position: absolute;
+            top: 116%;
+            left: 32%;
+            transition: 0.3s;
+
+        }
+
+        &__img {
+            @include imgBase;
+
+        }
+    }
+
+
+    .wss {
+        background: $col-sec;
+        margin-bottom: $ma-sec;
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 182px 300px;
+
+        }
+
+        &__container {
+            width: 34%;
+            transition: 0.3s
+        }
+
+        &__subttl-en {
+            @include subttlenBase;
+            margin-bottom: 30px;
+
+        }
+
+        &__catch {
+            font-family: $f-jp;
+            font-size: $fz-ttl;
+            letter-spacing: $ls-all;
+            line-height: 1.5;
+            margin-bottom: 30px;
+
+        }
+
+        &__ttl-jp {
+            @include subttljpBase;
+            margin-bottom: 30px;
+
+        }
+
+        &__txt {
+            @include txtBase;
+            width: 114%;
+            margin-bottom: 40px;
+
+        }
+
+        &__box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        &__more {
+            @include btntxtBase;
+            margin-right: 10px;
+
+        }
+
+        &__link {
+            display: block;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            transition: 0.3s;
+
+            &:hover {
+                &:hover {
+                    color: #acacac;
+                }
+            }
+
+        }
+
+        &__btn {
+            @include btnBase;
+            transition: 0.3s;
+
+            &:hover {
+                background: #acacac;
+                border:1px solid #acacac;
+            }
+        }
+
+        &__arrow-1 {
+            @include arrow1Base;
+        }
+
+        &__arrow-2 {
+            @include arrow2Base;
+        }
+
+        &__pic {
+            transition: 0.3s;
+        }
+    }
+
+
+    .business {
+        padding: 0 280px;
+        margin-bottom: $ma-sec;
+        transition: 0.3s;
+
+        &__ttl {
+            @include ttlenBase;
+            font-weight: $fw-ttl;
+            text-align: center;
+            margin-bottom: 30px;
+
+        }
+
+        &__ttl-jp {
+            @include subttljpBase;
+            text-align: center;
+            margin-bottom: 40px;
+
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__icon {
+            display: flex;
+            justify-content: center;
+            width: 230px;
+            margin-bottom: 50px;
+            margin: 0 auto;
+            text-align: center;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-20px);
+            }
+
+        }
+
+        &__icon-2 {
+            text-align: center;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-20px);
+            }
+        }
+
+        &__link {
+            @include txtBase;
+            text-decoration: none;
+            color: #000;
+            background-image: linear-gradient(90deg, #868686, #0099ff);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 0 1px;
+            transition: background-size 0.3s;
+
+            &:hover {
+                background-size: 100% 2px;
+            }
+        }
+    }
+
+
+    .history {
+        width: 69%;
+        margin: 0 auto;
+        margin-bottom: $ma-sec;
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &__container {
+            width: 45%;
+            transition: 0.3s
+        }
+
+        &__ttl {
+            @include ttlenBase;
+            font-weight: $fw-ttl;
+            margin-bottom: 30px;
+
+        }
+
+        &__ttl-jp {
+            @include subttljpBase;
+            margin-bottom: 30px;
+
+        }
+
+        &__txt {
+            @include txtBase;
+            margin-bottom: 40px;
+
+        }
+
+        &__box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        &__more {
+            @include btntxtBase;
+            margin-right: 10px;
+        }
+
+        &__link {
+            display: block;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            transition: 0.3s;
+
+            &:hover {
+                color: #acacac;
+            }
+        }
+
+        &__btn {
+            @include btnBase;
+            transition: 0.3s;
+
+            &:hover {
+                background: #acacac;
+                border:1px solid #acacac;
+            }
+        }
+
+        &__arrow-1 {
+            @include arrow1Base;
+        }
+
+        &__arrow-2 {
+            @include arrow2Base;
+        }
+
+        &__timeline {
+            width: 46%;
+            margin-top: 110px;
+            transition: 0.3s;
+        }
+
+        &__box-2 {
+            margin-bottom: 40px;
+            border-bottom: 1px solid $col-uline;
+            padding-bottom: 40px;
+
+            &:nth-child(6) {
+                border-style: none;
+            }
+        }
+
+        &__date {
+            font-family: $f-en;
+            font-size: $fz-year-company;
+            letter-spacing: $ls-all;
+            font-weight: 500;
+            margin-bottom: 20px;
+
+        }
+
+        &__txt-2 {
+            @include txtBase;
+        }
+    }
+
+
+    .profile {
+        width: 69%;
+        margin: 0 auto;
+
+        &__ttl {
+            @include ttlenBase;
+            font-weight: $fw-ttl;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: 0.3s
+        }
+
+        &__ttl-jp {
+            @include subttljpBase;
+            text-align: center;
+            margin-bottom: 100px;
+            transition: 0.3s
+        }
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__container {
+            transition: 0.3s;
+        }
+
+        &__box {
+            border-bottom: 1px solid $col-uline;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+
+            &:nth-child(4) {
+                border: none;
+            }
+        }
+
+        &__subttl-2 {
+            font-family: $f-en;
+            font-size: $fz-year-company;
+            letter-spacing: $ls-all;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        &__map {
+            transition: 0.3s;
+        }
+
+        &__txt {
+            @include txtBase;
+        }
+
+        &__link {
+            color: #000;
+            transition: 0.3s;
+
+            &:hover {
+                color: #001aff;
+            }
+        }
+    }
+}

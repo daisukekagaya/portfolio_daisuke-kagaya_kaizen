@@ -1,0 +1,15 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+
+@keyframes typing {
+    from {
+      width: 0 
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent 
+    }
+  }

@@ -1,0 +1,47 @@
+
+@use"../global" as * ;
+
+@keyframes footer__btn {
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes mv__scroll {
+    0% {
+        bottom: 1%;
+    }
+
+    50% {
+        bottom: 5%;
+    }
+
+    100% {
+        bottom: 1%;
+    }
+}
+
+@keyframes op {
+    0% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes oplogo {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+

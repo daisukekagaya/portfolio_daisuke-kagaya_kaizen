@@ -1,0 +1,87 @@
+@use "../global" as *;
+
+#thanks {
+
+    .thanks {
+
+        margin: 70px 0 200px 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 150px 0 200px 0;
+        }
+
+        &__ttl {
+            font-family: $f-en;
+            font-size: $fz-lpttljp;
+            font-weight: $fw-bold;
+            text-align: center;
+            margin-bottom: 70px;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-lpttljp__t;
+                margin-bottom: 150px;
+            }
+        }
+
+        &__ttl-en {
+            @include secttlBase;
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+                margin-bottom: 60px;
+
+                &::after {
+                    top: 5px;
+                    height: 48px;
+                    width: 75%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 90%;
+                }
+            }
+        }
+
+        &__txt {
+            font-family: $f-jp;
+            font-size: 20px;
+            font-weight: $fw-bold;
+            text-align: center;
+            margin-bottom: 200px;
+        }
+
+        &__link {
+            @include btnBase;
+            position: relative;
+            text-decoration: none;
+            color: #000;
+            margin: 0 auto;
+            transition: 0.2s;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+
+                .detail__arrow {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+
+        &__more {
+            font-family: $f-en;
+            font-size: 15px;
+            width: 100px;
+        }
+
+        &__arrow {
+            @include arrowBase;
+        }
+    }
+}

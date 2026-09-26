@@ -1,0 +1,82 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.gnav {
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        font-family: $font-en;
+        font-size: $fz-nav-en;
+        letter-spacing: $ls-ttl;
+        text-align: center;
+        margin-left: 35px;
+
+        &:nth-child(2) {
+            width: 115px;
+        }
+
+        &:nth-child(3) {
+            width: 130px;
+        }
+
+        &:nth-child(5) {
+            width: 205px;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        padding: 5px;
+        background-image: linear-gradient(90deg, #00e1ff, #0000ff);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 0 1px;
+        transition: background-size 0.3s;
+
+        &:hover {
+            background-size: 100% 1px;
+        }
+    }
+
+    &__span {
+        display: block;
+        margin-top: 5px;
+        font-family: $font-jp;
+        font-size: $fz-nav-jp;
+        letter-spacing: $ls-subttl;
+    }
+}
+
+.fnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 77px;
+
+    &__list {
+        font-family: $font-en;
+        font-size: $fz-nav-en;
+        letter-spacing: $le-txt;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 10px;
+        transition: 0.3s;
+
+        &:hover {
+            color: #9c9c9c;
+        }
+    }
+}

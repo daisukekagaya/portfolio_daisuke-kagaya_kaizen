@@ -1,0 +1,177 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.header {
+    position: fixed;
+    top: 90px;
+    height: 829px;
+    right: 0;
+    z-index: 1;
+
+
+    &__box {
+        display: flex;
+        margin-right: 78px;
+    }
+
+    &__slash {
+        color: #fff;
+    }
+
+
+    &__list {
+        font-family: $font-en;
+        font-size: $fz-nav;
+        letter-spacing: $ls-nav;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $nav-font;
+        padding: 5px 10px;
+        transition: 0.3s;
+
+        &:hover {
+            color: #777777;
+        }
+
+    }
+
+
+    &__reserve {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        letter-spacing: $ls-reserve;
+        width: 400px;
+        height: 65px;
+        background: $reserve-btn;
+        transition: 0.3s;
+
+        &:hover {
+            background: #337968;
+
+        }
+
+    }
+
+    &__link-2 {
+        font-family: $font-en;
+        font-size: $fz-res;
+        color: $nav-font;
+        text-decoration: none;
+        padding: 23px 157px;
+
+    }
+
+}
+
+
+
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 88px;
+    width: 48px;
+    height: 48px;
+
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 3;
+
+    &__top,
+    &__middle,
+    &__bottom {
+        position: absolute;
+        display: block;
+        width: 80%;
+        height: 1px;
+        transition: 0.5s;
+    }
+
+    &__top {
+        transform: translateY(-16px);
+        background: #000;
+
+    }
+
+    &__middle {
+        background: #000
+    }
+
+    &__bottom {
+        transform: translateY(16px);
+        background: #000;
+    }
+
+}
+
+.opacitybtn {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.slidemenu {
+    position: absolute;
+    top: -88px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 852px;
+    background: rgb(159, 159, 159);
+    transform: translateX(100%);
+    transition: 0.4s;
+    z-index: 2;
+
+
+    &__logo {
+        width: 200px;
+        margin-bottom: 50px;
+
+    }
+    
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+    
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__sns {
+        width: 25px;
+    }
+
+    &__img-2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+
+    }
+
+}

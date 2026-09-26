@@ -1,0 +1,352 @@
+@use "../global" as *;
+
+#banner__lower {
+    .banner {
+
+        margin: 70px 0 150px 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 150px 0 200px 0;
+        }
+
+        &__wrap {
+            padding: 0 25px;
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fadein 0.5s ease 1.2s forwards;
+
+            @media screen and (min-width: 768px) {
+                padding: 0 8%;
+                margin-bottom: 110px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                padding: 0 18%;
+                margin-bottom: 200px;
+            }
+        }
+
+        &__ttl {
+            font-family: $f-en;
+            font-size: $fz-lpttljp;
+            font-weight: $fw-bold;
+            text-align: center;
+            margin-bottom: 70px;
+            opacity: 0;
+            animation: slideinYunder 0.4s ease 0.6s forwards;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-lpttljp__t;
+                margin-bottom: 150px;
+            }
+        }
+
+        &__ttl-en {
+            @include secttlBase;
+            margin-bottom: 50px;
+            animation: slidein 0.6s ease;
+
+            @media screen and (min-width: 768px) {
+                font-size: $fz-topttl-t;
+                margin-bottom: 60px;
+
+                &::after {
+                    top: 5px;
+                    height: 48px;
+                    width: 81%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 89%;
+                }
+            }
+
+            @media screen and (min-width: 1500px) {
+                margin-bottom: 100px;
+
+                &::after {
+                    width: 92%;
+                }
+            }
+        }
+
+        &__subttl-en {
+            font-family: $f-en;
+            font-size: $fz-dttlen;
+            color: $cl-detail__minen;
+            margin-bottom: 10px;
+        }
+
+        &__subttl {
+            font-family: $f-jp;
+            font-size: $fz-dttljp;
+            font-weight: $fw-bold;
+            line-height: $lh-detail__ttl;
+            margin-bottom: 35px;
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dttljp__p;
+            }
+        }
+
+        &__type-box {
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 60px;
+                text-align: right;
+            }
+        }
+
+        &__txt-type {
+            font-family: $f-jp;
+            font-size: $fz-dttlen;
+            margin: 0 191px 10px 0;
+
+            &::before {
+                content: "TYPE";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-right: 20px;
+            }
+        }
+
+        &__txt-date {
+            font-family: $f-jp;
+            font-size: $fz-dttlen;
+
+            &::before {
+                content: "CREATION DATE";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-right: 20px;
+            }
+        }
+
+        &__pc-pic {
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 80px;
+            }
+        }
+
+        &__img {
+            @include imgBase;
+        }
+
+        &__box {
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 70px;
+
+            }
+        }
+
+        &__boxttl-jp {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+            width: 300px;
+
+            &::after {
+                content: "TARGET";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+
+            }
+        }
+
+        &__boxttl-jp2 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "PURPOSE";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+            }
+        }
+
+        &__boxttl-jp3 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "CONCEPT";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+
+            }
+        }
+
+        &__boxttl-jp4 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+            width: 300px;
+
+            &::after {
+                content: "OVERVIEW";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+
+            }
+        }
+
+        &__boxttl-jp5 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "DESIGN";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+
+            }
+        }
+
+        &__boxttl-jp6 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "CREATION TIME";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+            }
+        }
+
+        &__boxttl-jp7 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "TOOL";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+
+            }
+        }
+
+        &__boxttl-jp8 {
+            font-family: $f-jp;
+            font-size: $fz-dsubttl;
+            font-weight: $fw-bold;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "TOOL";
+                font-family: $f-en;
+                font-size: $fz-dttlen;
+                color: $cl-detail__minen;
+                margin-left: 20px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: $fz-dsubttl__p;
+
+            }
+        }
+
+        &__txt {
+            font-family: $f-jp;
+            font-size: $fz-dtxt;
+            line-height: $lh-detail__txt;
+        }
+
+        &__btnbox {
+            margin-bottom: 100px;
+        }
+
+        &__link {
+            @include btnBase;
+            position: relative;
+            text-decoration: none;
+            color: #000;
+            margin: 0 auto;
+            transition: 0.2s;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+
+                .detail__arrow {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+
+        &__more {
+            font-family: $f-en;
+            font-size: 15px;
+            width: 100px;
+        }
+
+        &__arrow {
+            @include arrowBase;
+        }
+    }
+}

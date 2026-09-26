@@ -1,0 +1,164 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.footer {
+    padding: 150px 120px 125px;
+    display: flex;
+    justify-content: space-between;
+    background: $clr-lightblue;
+
+    &__container {
+        &:nth-child(1) {
+            width: 1060px;
+        }
+
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+    &__logo {
+        background: url(../images/logo/wss_logo.svg) center center / cover;
+        width: 202px;
+        height: 85px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+
+        &:nth-child(1) {
+            padding-bottom: 56px;
+        }
+    }
+
+    .fnav {
+        width: 380px;
+        display: flex;
+        justify-content: space-between;
+        row-gap: 27px;
+
+
+        &__nav {
+            height: 58px;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: column;
+        }
+
+        &__list {
+            list-style-type: none;
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-family: $font-poppins;
+            font-weight: 700;
+            padding: 5px 10px;
+        }
+    }
+
+    &__sns-svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    &__btn-link {
+        display: block;
+        text-decoration: none;
+        background: $clr-deepblue;
+        color: #fff;
+        font-size: 45px;
+        font-weight: 700;
+        font-family: $font-poppins;
+        line-height: .7em;
+        padding: 34px 375px 60px;
+        border-radius: 150px;
+        position: relative;
+        background: linear-gradient(90deg,
+                rgb(63 92 255) 0%,
+                rgb(48 198 255) 50%,
+                rgb(21 87 255) 100%);
+        background-size: 200% 100%;
+        border: none;
+        transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+
+        &:hover {
+            background-position: 100% 0;
+        }
+
+        &::after {
+            content: "説明会予約";
+            font-size: 16px;
+            font-weight: 700;
+            position: absolute;
+            bottom: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__sns {
+        padding-bottom: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    &__list {
+        padding-bottom: 15px;
+        font-size: 12px;
+        letter-spacing: $ls-005;
+        
+        &:nth-of-type(5) {
+            padding-bottom: 35px;
+        }
+    }
+
+
+
+    &__link {
+        color: #000;
+    }
+
+    &__link-mail {
+        text-decoration: none;
+        color: #000;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            background: url(../images/logo/email.svg) center center / cover;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 12%;
+            left: -9%;
+
+        }
+    }
+
+    &__link-tell {
+        color: #000;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            background: url(../images/logo/call_logo.svg) center center / cover;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 7%;
+            left: -23%;
+        }
+    }
+
+}

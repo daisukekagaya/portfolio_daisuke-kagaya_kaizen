@@ -1,0 +1,48 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+// リサイズヘッダー
+.resizeHeader {
+    background: #fff7d9de;
+    padding: 10px;
+}
+
+.resizeTtl {
+    width: 200px;
+}
+
+.resizeGnav {
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+
+
+//バーガーボタンの設定
+
+.rotateTop {
+    transform: rotate(45deg);
+}
+
+.hideMiddle {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rotateBottom {
+    transform: rotate(-45deg);
+}
+
+// スライドメニューの設定
+
+.translatemenu {
+    transform: translateX(0);
+}
+
+// .opacitymenu {
+//     opacity: 0;
+//     pointer-events: none;
+// }

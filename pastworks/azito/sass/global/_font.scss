@@ -1,0 +1,34 @@
+//フォントに関する変数を登録します
+
+// フォントの種類
+$font-en: "Cormorant Garamond"; //英語フォント
+$font-jp: "Shippori Mincho", serif; //日本語フォント
+
+// 大きさ
+$fz-nav-en: 18px; //navの英語部分
+$fz-nav-jp: 12px; //navの日本語部分
+
+$fz-ttl: 31px; //セクションのタイトル
+$fz-consept-txt: 18px; //conseptのテキストサイズ
+$fz-subttl: 15px; //セクションのサブタイトル
+$fz-txt: 15px; //上記以外のテキストサイズ
+$fz-accesstxt: 14px;
+$fz-footer: 14px;
+$fz-btn: 14px;
+
+$fz-cafe-ttl: 22px; //cafemenuのタイトルサイズ
+$fz-cafe-subttl: 12px; //cafemenuのサブタイトルサイズ
+$fz-news-txt: 14px;  //navのテキストサイズ
+
+$fx-fbtn: 20px;
+$fz-fsmall: 12px;
+
+// 行間
+$lh-concept: 3.06;  //conceptの行間
+$lh-txt: 2.67; //テキストの行間
+$lh-menu: 2;  //menuテキストの行間
+
+// 文字間
+$ls-ttl: 0.1em;
+$ls-subttl: 0.05em;
+$le-txt: 0.05em;

@@ -1,0 +1,73 @@
+//フォントに関する変数を登録します
+
+// フォントの種類
+$f-en_min: "Oswald", sans-serif;
+$f-en: "Anton", sans-serif;
+$f-jp: "Noto Sans JP", sans-serif;
+
+// 太さ
+$fw-bold: 700;
+
+//行間
+$lh-about__txt: 3;
+$lh-topworks__txt: 1.5; 
+$lh-detail__ttl : 1.3;
+$lh-contact__txt: 2;
+$lh-detail__txt: 2;
+ 
+// フォントの大きさ
+// ヘッダー
+$fz-hbg: 14px; 
+$fz-gnav: 20px;
+
+// トップページ
+$fz-topabout-ttl__s: 30px;
+$fz-about-catch: 50px;
+$fz-topttl: 24px;
+$fz-toptxt: 15px;
+
+// トップページ タブレット
+$fz-topabout-ttl__t: 55px;
+$fz-about-catch__t: 75px;
+$fz-topttl-t: 55px;
+$fz-toptxt-t: 18px;
+
+//トップページ  pc
+$fz-toptxt-p: 20px;
+
+// 下層ページ共通 スマホ
+$fz-lpttljp: 30px;
+$fz-lpsubttl: 24px;
+$fz-lptxt: 14px;
+
+// 下層ページ共通 タブレット
+$fz-lpttljp__t: 43px;
+$fz-lpsubttl__t: 21px;
+$fz-lptxt__t: 15px;
+
+// 下層ページ共通 pc
+$fz-lpsubttl__p: 32px;
+
+// worksページ
+$fz-wttl: 20px;
+
+//detailページ
+$fz-dttlen: 14px;
+$fz-dtxt: 14px;
+$fz-dttljp: 24px;
+$fz-dsubttl: 20px;
+
+//detailページ pc
+$fz-dttljp__p: 34px;
+$fz-dsubttl__p: 24px;
+
+//contactページ
+$fz-consubttl: 18px;
+$fz-conred: 12px;
+
+// フッター
+$fz-fnav: 15px;
+$fz-copy: 12px;
+
+//ボタン
+$fz-btn: 18px;

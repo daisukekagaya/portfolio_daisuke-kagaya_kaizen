@@ -1,0 +1,87 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+
+
+@mixin navBase {
+    font-family: $f-en;
+    font-size: $fz-nav;
+    letter-spacing: $ls-all;
+
+}
+
+@mixin subttlenBase {
+    font-family: $f-en;
+    font-size: $fz-ttl__en;
+    letter-spacing: $ls-all;
+
+}
+
+@mixin ttlenBase {
+    font-family: $f-en;
+    font-size: $fz-ttl;
+    letter-spacing: $ls-all;
+
+}
+
+@mixin subttljpBase {
+    font-family: "Zen Old Mincho";
+    font-size: $fz-subttljp;
+    letter-spacing: $ls-all;
+
+}
+
+@mixin txtBase {
+    font-family: "Zen Old Mincho";
+    font-size: $fz-txt;
+    letter-spacing: $ls-all;
+    line-height: $lh-txt;
+
+}
+
+@mixin btntxtBase {
+    font-family: $f-en;
+    font-size: $fz-more;
+    letter-spacing: $ls-btn;
+
+}
+
+@mixin imgBase($objectfit:cover) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: $objectfit;
+}
+
+@mixin btnBase {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $col-btn;
+    border-radius: 50%;
+    background: $col-btn;
+
+}
+
+@mixin arrow1Base {
+    display: block;
+    position: absolute;
+    top: 47%;
+    left: 21%;
+    border-top: 1px solid #ffffff;
+    width: 32px;
+
+}
+
+@mixin arrow2Base {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 47%;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    
+}
